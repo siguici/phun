@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.bat eol=crlf
+
+**/*.php linguist-language=PHP
+**/.ts linguist-language=TypeScript
+**/.tsx linguist-language=TypeScript
+**/*.v linguist-language=V
+**/*.vv linguist-language=V
+**/*.vsh linguist-language=V
+**/v.mod linguist-language=V

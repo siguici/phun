@@ -1,0 +1,7 @@
+spec/
+.editorconfig
+.gitattributes
+biome.json
+bunfig.toml
+setup.ts
+tsconfig.json

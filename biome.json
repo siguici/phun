@@ -1,0 +1,38 @@
+{
+  "organizeImports": {
+    "enabled": true,
+    "ignore": [".github", ".vscode", "node_modules"]
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "style": {
+        "useBlockStatements": "error",
+        "useShorthandArrayType": "error",
+        "noShoutyConstants": "warn",
+        "noParameterAssign": "off",
+        "noNonNullAssertion": "off"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "off"
+      },
+      "suspicious": {
+        "noImplicitAnyLet": "off",
+        "noExplicitAny": "off"
+      },
+      "complexity": {
+        "noBannedTypes": "off",
+        "noUselessTypeConstraint": "off"
+      }
+    },
+    "ignore": [".github", ".vscode", "node_modules"]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "lineWidth": 80,
+    "ignore": [".github", ".vscode", "node_modules"]
+  }
+}
