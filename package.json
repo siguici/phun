@@ -48,6 +48,7 @@
     "@biomejs/biome": "^1.6.1",
     "@types/bun": "^1.0.10",
     "@types/node": "^20.11.30",
+    "boss.sh": "^0.0.2",
     "typescript": "^5.4.3"
   }
 }
