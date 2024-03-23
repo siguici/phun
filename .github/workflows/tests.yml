@@ -16,7 +16,7 @@ jobs:
         bun: [1.0]
         php: [8.3]
         experimental: [false]
-    name: 👷 CI BOSS on Bun-${{ matrix.bun }} under ${{ matrix.os }}
+    name: 👷 CI Phun on Bun-${{ matrix.bun }} under ${{ matrix.os }}
 
     steps:
       - name: 🚚 Get latest code

@@ -31,8 +31,7 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "check": "biome ci",
-    "ci": "biome ci .",
+    "check": "biome ci .",
     "fix": "bun run format.fix && bun run lint.fix",
     "format": "biome format .",
     "format.fix": "biome format --write .",

@@ -1,6 +1,6 @@
-# PHP & Bun (Phun)
+# PHP 💙 Bun (Phun)
 
-Phun (PHP + Bun) allows you to easily import and execute PHP file from your JavaScript/TypeScript modules, leveraging the power of Bun.
+Phun allows you to easily import and execute PHP file from your JavaScript/TypeScript modules, leveraging the power of Bun.
 
 ## Installation
 
@@ -33,5 +33,5 @@ console.log(my_php_module());
 
 import { use } from "phun";
 
-const my_php_module = await use(import.meta.dir + '/my/php/module.php', {name: "Sigui", username: "Sikessem"});
+const my_php_module = await use(import.meta.dir + '/my/php/module.php', {name: "Sigui", username: "siguici"});
 ```
