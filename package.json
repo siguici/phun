@@ -1,5 +1,5 @@
 {
-  "name": "phun.sh",
+  "name": "phun",
   "version": "0.0.0",
   "private": false,
   "type": "module",
@@ -12,12 +12,12 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://npmjs.com/package/phun.sh",
+  "homepage": "https://npmjs.com/package/phun",
   "repository": {
     "type": "git",
-    "url": "https://github.com/siguici/phun.sh"
+    "url": "https://github.com/siguici/phun"
   },
-  "bugs": "https://github.com/siguici/phun.sh/issues",
+  "bugs": "https://github.com/siguici/phun/issues",
   "author": {
     "name": "Sigui Kessé Emmanuel",
     "email": "siguici@proton.me",

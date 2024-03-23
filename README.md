@@ -7,7 +7,7 @@ Phun (PHP + Bun) allows you to easily import and execute PHP file from your Java
 To install Phun, execute the following command with [Bun](https://bun.sh):
 
 ```shell
-bun add phun.sh
+bun add phun
 ```
 
 ## Configuration
@@ -15,7 +15,7 @@ bun add phun.sh
 Configure Phun in your project by defining the files to import in [the Bun preload file](https://bun.sh/docs/runtime/bunfig#preload):
 
 ```typescript
-import { register } from "phun.sh";
+import { register } from "phun";
 
 register();
 ```
@@ -31,7 +31,7 @@ console.log(my_php_module());
 
 // Or
 
-import { use } from "phun.sh";
+import { use } from "phun";
 
 const my_php_module = await use(import.meta.dir + '/my/php/module.php', {name: "Sigui", username: "Sikessem"});
 ```
