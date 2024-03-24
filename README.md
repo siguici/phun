@@ -3,7 +3,7 @@
 Phun offers a seamless PHP integration for JavaScript/TypeScript projects, powered by Bun.
 It's a great choice, especially if you prefer PHP over JSX/TSX.
 
-## Prerequisites
+## 📋 Requirements
 
 Ensure you have the following installed:
 
@@ -11,7 +11,7 @@ Ensure you have the following installed:
 
 - [**Bun**](https://bun.sh/docs/installation): Needed for efficient PHP subprocess execution.
 
-## Installation
+## ⚡️Installation
 
 To install Phun, execute the following command with [Bun](https://bun.sh):
 
@@ -19,7 +19,7 @@ To install Phun, execute the following command with [Bun](https://bun.sh):
 bun add phun
 ```
 
-## Configuration
+## 🔧 Configuration
 
 Configure Phun in your project by defining the files to import in [the Bun preload file](https://bun.sh/docs/runtime/bunfig#preload):
 
@@ -29,23 +29,45 @@ import { register } from "phun";
 register();
 ```
 
-## Usage
+## 📖 Usage
+Phun provides multiple ways to incorporate PHP code into your JavaScript/TypeScript projects.
 
-Here's how to use phun in your project:
+### Rendering PHP Code
 
-```typescript
-import my_php_module from "my/php/module.php";
+  You can render PHP code directly using the `render()` function:
 
-console.log(my_php_module());
+  ```typescript
+  import { render } from 'phun';
 
-// Or
+  const result = await render(`<?= "Hello, $name!" ?>`, { name: 'Sigui' });
 
-import { use } from "phun";
+  console.log(result); // Output: Hello, Sigui!
+  ```
 
-const my_php_module = await use(import.meta.dir + '/my/php/module.php', {name: "Sigui", username: "siguici"});
+### Importing PHP Modules
+
+  You can import and use PHP modules in your JavaScript/TypeScript projects:
+
+  ```typescript
+  import my_php_module from "my/php/module.php";
+
+  console.log(my_php_module());
+  ```
+
+### Dynamic Using with Data
+
+  You can pass data to PHP code for dynamic rendering using the `use()` function:
+
+  ```typescript
+
+  import { use } from "phun";
+
+  const my_php_module = await use(import.meta.dir + '/my/php/module.php', { name: "Sigui", username: "siguici" });
+
+  console.log(my_php_module);
 ```
 
-## Contributions
+## 👏 Contributions
 
 Contributions are welcome! You can:
 
@@ -57,6 +79,6 @@ Contributions are welcome! You can:
 
 Let's collaborate and make Phun even more awesome together!
 
-## License
+## 📄 License
 
 This project is licensed under the MIT License. [See the LICENSE file for more details](./LICENSE.md).

@@ -1,6 +1,20 @@
+import { unlinkSync } from "node:fs";
 import { register as boss_register, load } from "boss.sh";
 
-export async function use(path: string, data?: object): Promise<any> {
+export type Data = Record<string, any>;
+
+export async function render(code: string, data?: Data): Promise<any> {
+  const path = `${process.cwd()}/phun-${Date.now()}-${Math.random()
+    .toString(36)
+    .split(".")
+    .pop()}.php`;
+  Bun.write(path, code);
+  const render = await use(path, data);
+  unlinkSync(path);
+  return render;
+}
+
+export async function use(path: string, data?: Data): Promise<any> {
   const json = JSON.stringify(data ?? {});
 
   return await load(path, [
