@@ -1,5 +1,17 @@
 {
   "name": "phun",
+  "description": "Seamlessly integrate PHP execution within your JavaScript/TypeScript projects with Phun.",
+  "keywords": [
+    "phun",
+    "php",
+    "typescript",
+    "bun",
+    "templating",
+    "rendering",
+    "integration",
+    "bun-shell",
+    "php-scripting"
+  ],
   "version": "0.0.1",
   "private": false,
   "type": "module",
