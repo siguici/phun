@@ -16,11 +16,11 @@
   "private": false,
   "type": "module",
   "engines": {
-    "bun": "^1.0.33",
+    "bun": "^1.0.35",
     "node": "prefer bun",
     "npm": "prefer bun"
   },
-  "packageManager": "bun@1.0.33",
+  "packageManager": "bun@1.0.35",
   "publishConfig": {
     "access": "public"
   },
@@ -55,11 +55,13 @@
     "test.watch": "bun test --watch",
     "type.check": "tsc --incremental --noEmit"
   },
+  "dependencies": {
+    "boss.sh": "^0.0.4"
+  },
   "devDependencies": {
-    "@biomejs/biome": "^1.6.1",
+    "@biomejs/biome": "^1.6.3",
     "@types/bun": "^1.0.10",
     "@types/node": "^20.11.30",
-    "boss.sh": "^0.0.2",
     "typescript": "^5.4.3"
   }
 }
