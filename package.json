@@ -10,9 +10,11 @@
     "rendering",
     "integration",
     "bun-shell",
-    "php-scripting"
+    "php-scripting",
+    "run",
+    "serve"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "type": "module",
   "engines": {
