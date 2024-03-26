@@ -12,8 +12,6 @@ import type { Server } from "bun";
 export type Data = Record<string, any>;
 
 export async function run(path: string, cwd?: Cwd, env?: Env): Promise<Result> {
-  const json = JSON.stringify(data ?? {});
-
   return await boss_run(path, ["php", "-f", path], cwd, env);
 }
 
