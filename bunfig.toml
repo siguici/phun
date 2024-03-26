@@ -1,3 +1,5 @@
+preload = ["./setup.ts"]
+
 [test]
 preload = ["./setup.ts"]
 root="./spec/"
