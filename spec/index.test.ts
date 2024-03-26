@@ -4,9 +4,9 @@ import hello_php from "./hello.php";
 
 it("should import PHP file", async () => {
   expect(hello_php).toEqual("Hello World!");
-  expect(await use(`${import.meta.dir}/hello.php`, { name: "PHP" })).toEqual(
-    "Hello PHP!",
-  );
+  expect(await use(`${import.meta.dir}/hello.php`, { name: "PHP" })).toEqual({
+    default: "Hello PHP!",
+  });
 });
 
 it("should render PHP code", async () => {

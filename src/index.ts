@@ -80,7 +80,7 @@ export async function render(
   Bun.write(path, code);
   const render = await use(path, data, cwd, env);
   unlinkSync(path);
-  return render;
+  return render.default;
 }
 
 export async function use(
