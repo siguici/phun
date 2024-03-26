@@ -1,8 +1,21 @@
 import { unlinkSync } from "node:fs";
-import { type Cwd, type Env, register as boss_register, load } from "boss.sh";
+import {
+  type Cwd,
+  type Env,
+  type Result,
+  register as boss_register,
+  run as boss_run,
+  load,
+} from "boss.sh";
 import type { Server } from "bun";
 
 export type Data = Record<string, any>;
+
+export async function run(path: string, cwd?: Cwd, env?: Env): Promise<Result> {
+  const json = JSON.stringify(data ?? {});
+
+  return await boss_run(path, ["php", "-f", path], cwd, env);
+}
 
 export async function serve(
   path: string,
