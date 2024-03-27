@@ -1,3 +1,3 @@
-import { register } from "./src/index.ts";
+import { setup } from "./src/index.ts";
 
-register();
+setup();

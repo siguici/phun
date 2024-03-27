@@ -24,9 +24,9 @@ bun add phun
 Configure Phun in your project by defining the files to import in [the Bun preload file](https://bun.sh/docs/runtime/bunfig#preload):
 
 ```typescript
-import { register } from "phun";
+import { setup } from "phun";
 
-register();
+setup();
 ```
 
 ## 📖 Usage

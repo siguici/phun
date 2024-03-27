@@ -1,18 +1,15 @@
 import { unlinkSync } from "node:fs";
-import {
-  type Cwd,
-  type Env,
-  type Result,
-  register as boss_register,
-  run as boss_run,
-  load,
-} from "boss.sh";
+import { type Cwd, type Env, type Result, load, register, run } from "boss.sh";
 import type { Server } from "bun";
 
 export type Data = Record<string, any>;
 
-export async function run(path: string, cwd?: Cwd, env?: Env): Promise<Result> {
-  return await boss_run(path, ["php", "-f", path], cwd, env);
+export async function execute(
+  path: string,
+  cwd?: Cwd,
+  env?: Env,
+): Promise<Result> {
+  return await run(path, ["php", "-f", path], cwd, env);
 }
 
 export async function serve(
@@ -94,20 +91,20 @@ export async function use(
     [
       "php",
       "-r",
-      `$data = json_decode('${json}', true); if(is_array($data) && !\\array_is_list($data)) extract($data); ob_start(); $default = require "${path}"; if($default === 1) $default = ob_get_clean(); else ob_end_clean(); echo json_encode($default);`,
+      `$data = json_decode('${json}', true); if(is_array($data) && !\\array_is_list($data)) extract($data); ob_start(); $default = require "${path}"; if($default === 1) $default = ob_get_clean(); else ob_end_clean(); echo json_encode(headers_sent() ? ['headers' => headers_list(), 'data' => $default] : $default);`,
     ],
     cwd,
     env,
   );
 }
 
-export function register(
+export function setup(
   name = "PHP Loader",
   filter: RegExp = /\.php$/,
   cwd?: Cwd,
   env?: Env,
 ) {
-  boss_register(
+  register(
     name,
     filter,
     (path) => [
