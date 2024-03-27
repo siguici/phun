@@ -1,0 +1,55 @@
+{
+  "name": "phun/phun",
+  "description": "Seamlessly integrate PHP execution within your JavaScript/TypeScript projects with Phun.",
+  "keywords": [
+    "phun",
+    "php",
+    "typescript",
+    "bun",
+    "templating",
+    "rendering",
+    "integration",
+    "bun-shell",
+    "php-scripting",
+    "run",
+    "serve"
+  ],
+  "homepage": "https://packagist.org/packages/phun/phun",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sigui Kessé Emmanuel",
+      "email": "proton@proton.me",
+      "homepage": "https://siguici.deno.dev"
+    }
+  ],
+  "support": {
+    "source": "https://github.com/siguici/phun",
+    "issues": "https://github.com/siguici/phun/issues"
+  },
+  "require": {
+    "php": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Phun\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Phun\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-main": "0.x-dev"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}

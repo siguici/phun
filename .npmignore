@@ -1,7 +1,10 @@
 spec/
+tests/
+vendor/
 .editorconfig
 .gitattributes
 biome.json
 bunfig.toml
+composer.*
 setup.ts
 tsconfig.json
