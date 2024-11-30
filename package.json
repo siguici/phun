@@ -22,7 +22,7 @@
     "node": "prefer bun",
     "npm": "prefer bun"
   },
-  "packageManager": "bun@1.0.35",
+  "packageManager": "bun@1.2.9",
   "publishConfig": {
     "access": "public"
   },
