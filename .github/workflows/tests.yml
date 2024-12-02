@@ -14,7 +14,7 @@ jobs:
       matrix:
         os: [ubuntu-latest]
         bun: [1.2]
-        php: [8.3]
+        php: [8.4]
         experimental: [false]
     name: 👷 CI Phun on Bun-${{ matrix.bun }} under ${{ matrix.os }}
 

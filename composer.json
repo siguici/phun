@@ -28,7 +28,7 @@
     "issues": "https://github.com/siguici/phun/issues"
   },
   "require": {
-    "php": "*"
+    "php": "^8.4"
   },
   "autoload": {
     "psr-4": {
